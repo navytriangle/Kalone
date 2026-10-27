@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kalone"
+version = "0.1.0"
+description = "Tiny research prototype of an LLM decoder that can copy-paste input spans instead of retyping them."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["torch>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["kalone*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
